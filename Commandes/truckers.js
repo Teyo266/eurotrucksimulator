@@ -21,8 +21,8 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "truckers") {
-  var role = message.author.guild.roles.find('name', '🚚 Truckers')
-  message.author.addRole(role)
+  var role = message.guild.roles.find("name", "🚚 Truckers");
+  message.author.addRole(role).catch(console.err);
   message.reply("**ok**")
 
 
