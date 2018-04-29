@@ -30,7 +30,7 @@ client.on("message", message => {
 /* =Démarrage Système= */
 client.on("ready", () => {
   client.user.setStatus(`dnd`)
-  client.user.setGame(`!aide | ${client.users.size} Joueurs`, "https://www.twitch.tv/monstercat");
+  client.user.setActivity(`!help | ${client.users.size} users on Discord`, "https://www.twitch.tv/monstercat");
   console.log(`
   =======================================
    Démarrage des Systèmes en cours ...   
