@@ -20,13 +20,10 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase(); 
 ;
-if(command === "truckers") {
+if(command === "trucker") {
   var role = message.guild.roles.find("name", "🚚 Truckers");
-  let member = message.author.id;
-  member.addRole(role).catch(console.err);
-  message.reply("**ok**")
-
-
+  message.author.addRole(role);
+  message.reply("**ok**");
 }});
 /* =Connexion Système= */
 client.login(config.token);
