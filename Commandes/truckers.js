@@ -22,7 +22,8 @@ client.on("message", message => {
 ;
 if(command === "truckers") {
   var role = message.guild.roles.find("name", "🚚 Truckers");
-  message.author.addRole(role).catch(console.err);
+  let member = message.author();
+  member.addRole(role).catch(console.err);
   message.reply("**ok**")
 
 
