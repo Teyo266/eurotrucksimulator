@@ -21,12 +21,12 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "trucker") {
-let member = message.author();
+let member = message.mentions.members.first();
 if(!member)
-member.send("**Test**");
 message.delete();
-message.channel.send("Grade reçu")
+message.channel.send("confirmation")
 message.delete(4000);
+console.log(`=> ${message.author.tag} à été validé.`);
 var role = member.guild.roles.find('name', '🚚 Truckers')
 member.addRole(role)
 
