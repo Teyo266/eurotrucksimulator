@@ -11,6 +11,7 @@
 const Discord = require ("discord.js");
 const client = new Discord.Client();
 const config = require ("./config.json");
+const newUsers = new Discord.Collection();
 
 /* =Commande= */
 client.on("message", message => {
@@ -18,21 +19,8 @@ client.on("message", message => {
   if(message.content.indexOf(config.prefix) !== 0) return;
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase(); 
-;
-if(command === "trucker") {
-let member = message.mentions.members.first();
-if(member != message.author.tag)  return
-message.reply("erreur");
-message.delete();
-message.channel.send("confirmation")
-message.delete(3000);
-console.log(`=> ${message.author.tag} à été validé.`);
-var role = member.guild.roles.find('name', '🚚 Truckers')
-member.addRole(role);
+});
 
 
-}});
-/* =Connexion Système= */
-client.login(config.token);
 
 
