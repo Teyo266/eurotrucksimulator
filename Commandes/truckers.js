@@ -21,9 +21,16 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "trucker") {
-  var role = message.guild.roles.find("name", "🚚 Truckers");
-  message.author.addRole(role);
-  message.reply("**ok**");
+let member = message.author();
+if(!member)
+member.send("**Test**");
+message.delete();
+message.channel.send("Grade reçu")
+message.delete(4000);
+var role = member.guild.roles.find('name', '🚚 Truckers')
+member.addRole(role)
+
+
 }});
 /* =Connexion Système= */
 client.login(config.token);
