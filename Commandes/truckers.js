@@ -21,8 +21,6 @@ client.on("message", message => {
 ;
 if(command === "trucker") {
 let member = message.mentions.members.first();
-if(member != message.author.tag)  return
-message.reply("erreur");
 message.delete();
 message.channel.send("confirmation")
 message.delete(3000);
