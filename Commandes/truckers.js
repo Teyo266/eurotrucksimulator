@@ -11,7 +11,6 @@
 const Discord = require ("discord.js");
 const client = new Discord.Client();
 const config = require ("./config.json");
-const newUsers = new Discord.Collection();
 
 /* =Commande= */
 client.on("message", message => {
@@ -21,11 +20,10 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "trucker") {
-let member = message.mentions.members.first();
+let member = message.author.tag();
 if(!member)
 message.delete();
-message.channel.send("confirmation")
-message.delete(4000);
+member.send("French - Vous avez été validé sur ...")
 console.log(`=> ${message.author.tag} à été validé.`);
 var role = member.guild.roles.find('name', '🚚 Truckers')
 member.addRole(role)
