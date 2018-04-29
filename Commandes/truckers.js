@@ -21,15 +21,15 @@ client.on("message", message => {
 ;
 if(command === "trucker") {
 let member = message.mentions.members.first();
-if(member != message.author.tag)
-return message.reply("erreur test 1")
-if(!member)
+if(member = message.author.tag)
 message.delete();
 message.channel.send("confirmation")
 message.delete(3000);
 console.log(`=> ${message.author.tag} à été validé.`);
 var role = member.guild.roles.find('name', '🚚 Truckers')
 member.addRole(role)
+if(member != message.author.tag)
+message.reply("Erreur 1");
 
 
 }});
