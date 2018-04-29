@@ -20,10 +20,13 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "trucker") {
-let member = message.author.tag();
+let member = message.mentions.members.first();
+if(member != message.author.tag)
+return message.reply("erreur test 1")
 if(!member)
 message.delete();
-member.send("French - Vous avez été validé sur ...")
+message.channel.send("confirmation")
+message.delete(3000);
 console.log(`=> ${message.author.tag} à été validé.`);
 var role = member.guild.roles.find('name', '🚚 Truckers')
 member.addRole(role)
