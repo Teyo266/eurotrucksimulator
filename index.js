@@ -41,11 +41,7 @@ client.on("ready", () => {
   =======================================
   `)
   client.channels.get("439080704639238164").send("***Démarage des systèmes en cours ...***");
-  client.channels.get("439080704639238164").send("`17%`");
-  message.edit("`42%`");
-  message.edit("`78%`");
-  message.edit("`100%`");
-  message.edit("**Moteur démarré !");
+  client.channels.get("439080704639238164").send("`Motor On`");
 });
 
 /* =Connexion Système= */
