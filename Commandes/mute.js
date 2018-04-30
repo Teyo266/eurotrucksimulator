@@ -13,7 +13,7 @@ const client = new Discord.Client();
 const config = require ("./config.json");
 
 /* =Commande= */
-client.on("message", message => {
+client.on("message", async message => {
   if(message.author.bot) return;
   if(message.content.indexOf(config.prefix) !== 0) return;
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
