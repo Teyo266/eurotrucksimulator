@@ -20,15 +20,40 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 
 if(command === "trucker") {
-message.delete();
-var role = message.guild.roles.find('name', '🚚 Truckers')
-if(message.member.roles.has(role))
-message.channel.send("You have already confirm the rules.")
-else
 let member = message.mentions.members.first();
-message.channel.send("confirmation");
+message.delete();
+message.member.send({embed: {
+  color: 3447003,
+  author: {
+    name: client.user.username,
+    icon_url: client.user.avatarURL
+  },
+  title: "Official Website ► Truckers MP",
+  url: "https://truckersmp.com/",
+  description: "",
+  fields: [{
+      name: "🚲 French",
+      value: "*Salut toi ! Je te remercie d'avoir les règles du serveur Discord 'Truckers MP'. Tu as désormais accès à une des channels supplémentaires ! N'oublies pas d'aller sur le site lire les règles aussi.  Allez, va t'amuser maintenant ♥"
+    },
+    {
+      name: "Masked links",
+      value: "You can put [masked links](http://google.com) inside of rich embeds."
+    },
+    {
+      name: "Markdown",
+      value: "You can put all the *usual* **__Markdown__** inside of them."
+    }
+  ],
+  footer: {
+    icon_url: client.user.avatarURL,
+    text: ""
+  }
+}
+});
+
 message.delete(3000);
 console.log(`=> ${message.author.tag} à été validé.`);
+var role = message.guild.roles.find('name', '🚚 Truckers')
 message.member.addRole(role);
 
 
