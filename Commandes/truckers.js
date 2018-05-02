@@ -21,11 +21,14 @@ client.on("message", message => {
 
 if(command === "trucker") {
 message.delete();
+var role = message.guild.roles.find('name', '🚚 Truckers')
+if(message.member.roles.has(role))
+message.channel.send("You have already confirm the rules.")
+else
 let member = message.mentions.members.first();
 message.channel.send("confirmation");
 message.delete(3000);
 console.log(`=> ${message.author.tag} à été validé.`);
-var role = message.guild.roles.find('name', '🚚 Truckers')
 message.member.addRole(role);
 
 
