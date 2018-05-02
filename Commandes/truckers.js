@@ -20,14 +20,8 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "trucker") {
-let member = message.mentions.members.first();
-message.delete();
-message.channel.send("confirmation")
-message.delete(3000);
-console.log(`=> ${message.author.tag} à été validé.`);
-var role = member.guild.roles.find('name', '🚚 Truckers')
-message.author.member.addRole(role);
-
+  const guildMember = message.member;
+  guildMember.addRole('🚚 Truckers');
 
 }});
 /* =Connexion Système= */
