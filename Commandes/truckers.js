@@ -25,7 +25,7 @@ message.delete();
 message.channel.send("confirmation")
 message.delete(3000);
 console.log(`=> ${message.author.tag} à été validé.`);
-var role = member.guild.roles.find('name', '🚚 Truckers')
+var role = message.guild.roles.find('name', '🚚 Truckers')
 message.member.addRole(role);
 
 
