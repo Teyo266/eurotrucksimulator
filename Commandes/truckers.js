@@ -33,15 +33,15 @@ message.member.send({embed: {
   description: "",
   fields: [{
       name: "🚲 French",
-      value: "*Salut toi ! Je te remercie d'avoir les règles du serveur Discord 'Truckers MP'. Tu as désormais accès à une des channels supplémentaires ! N'oublies pas d'aller sur le site lire les règles aussi.  Allez, va t'amuser maintenant ♥"
+      value: "**Salut toi ! Je te remercie d'avoir les règles du serveur Discord 'Truckers MP'. Tu as désormais accès à une des channels supplémentaires ! N'oublies pas d'aller sur le site lire les règles aussi.  Allez, va t'amuser maintenant** ♥"
     },
     {
-      name: "Masked links",
-      value: "You can put [masked links](http://google.com) inside of rich embeds."
+      name: "🛵 English",
+      value: "**Hey you ! Thank's for read the rules of the Discord server 'Truckers MP'. Now, you have acces to news channels on the server ! Don't forget to go on the official website and read the rules. Let's have fun now !** ♥"
     },
     {
-      name: "Markdown",
-      value: "You can put all the *usual* **__Markdown__** inside of them."
+      name: "Rules ► Truckers MP",
+      value: "[Official rules](https://forum.truckersmp.com/index.php?/forum/115-truckersmp-rules/)"
     }
   ],
   footer: {
