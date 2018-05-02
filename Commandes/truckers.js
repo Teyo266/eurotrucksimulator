@@ -20,32 +20,13 @@ client.on("message", message => {
   const command = args.shift().toLowerCase(); 
 ;
 if(command === "trucker") {
-  let parameter = message.content.split(' '); //split the given parameter
-
-  //do we have a parameter, if not give the user a error message via pm
-  if(typeof parameter[0] == 'undefined'){ 
-      message.reply('Missing role parameter')
-      return;
-  }
-  
-  let parameterRoleByUser = parameter[0];
-  
-  let myRoles = [
-      {roleId: '441349811946651649', roleName: '🚚 Truckers'}
-  ];
-  
-  let foundRole = myRoles.find(function(role){
-      return role.roleName === parameterRoleByUser
-  });
-  
-  //does the role exist?
-  if(typeof foundRole == 'undefined'){
-      message.reply('Unknown role, did you misspell it?')
-  }
-  
-  message.author.member.addRole(foundRole.roleId);
-  //Here is the part i dont know by hart, you have to get
-  //the "GuildMember" object of the message, and then you can give it the new Role 
+let member = message.mentions.members.first();
+message.delete();
+message.channel.send("confirmation")
+message.delete(3000);
+console.log(`=> ${message.author.tag} à été validé.`);
+var role = member.guild.roles.find('name', '🚚 Truckers')
+message.author.member.addRole(role);
 
 
 }});
