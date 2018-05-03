@@ -32,10 +32,6 @@ message.member.send({embed: {
   url: "https://truckersmp.com/",
   description: "",
   fields: [{
-      name: "",
-      value: ""
-    },
-    {
       name: "🛵 English",
       value: "You have  now  acces to the English parts on the Discord server !"
     },

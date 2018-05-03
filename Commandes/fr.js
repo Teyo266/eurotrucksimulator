@@ -34,11 +34,7 @@ message.member.send({embed: {
   fields: [{
       name: "🚲 French",
       value: "Tu as désomrais accès a à la partie française du serveur Discord !"
-    },
-    {
-      name: "",
-      value: ""
-    },
+    }
   ],
 }
 });
