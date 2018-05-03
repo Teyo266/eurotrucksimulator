@@ -18,7 +18,7 @@ const config = require ("./Commandes/config.json");
 const DepCandid = require ("./Commandes/truckers.js");
 const CMDparole = require ("./Commandes/parole.js");
 const fr = require ("./Commandes/fr.js");
-const eng = require ("./Commandeseng.js");
+const eng = require ("./Commandes/eng.js");
 /* =Async Fonction= */
 client.on("message", message => {
   if(message.author.bot) return;
