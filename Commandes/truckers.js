@@ -33,7 +33,7 @@ message.member.send({embed: {
   description: "",
   fields: [{
       name: "🚲 French",
-      value: "**Salut toi ! Je te remercie d'avoir les règles du serveur Discord 'Truckers MP'. Tu as désormais accès à une des channels supplémentaires ! N'oublies pas d'aller sur le site lire les règles aussi.  Allez, va t'amuser maintenant** ♥"
+      value: "**Salut toi ! Je te remercie d'avoir lu les règles du serveur Discord 'Truckers MP'. Tu as désormais accès à une des channels supplémentaires ! N'oublies pas d'aller sur le site lire les règles aussi.  Allez, va t'amuser maintenant** ♥"
     },
     {
       name: "🛵 English",
@@ -46,12 +46,10 @@ message.member.send({embed: {
   ],
   footer: {
     icon_url: client.user.avatarURL,
-    text: ""
+    text: "🚚 🚚 🚚 🚚 🚚"
   }
 }
 });
-
-message.delete(3000);
 console.log(`=> ${message.author.tag} à été validé.`);
 var role = message.guild.roles.find('name', '🚚 Truckers')
 message.member.addRole(role);
