@@ -19,7 +19,7 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase(); 
 
-if(command === "trucker") {
+if(command === "eng") {
 let member = message.mentions.members.first();
 message.delete();
 message.member.send({embed: {
@@ -39,18 +39,10 @@ message.member.send({embed: {
       name: "🛵 English",
       value: "You have  now  acces to the English parts on the Discord server !"
     },
-    {
-      name: "",
-      value: ""
-    }
   ],
-  footer: {
-    icon_url: client.user.avatarURL,
-    text: ""
-  }
 }
 });
-console.log(`=> ${message.author.tag} parle`);
+console.log(`=> ${message.author.tag} speak English`);
 var role = message.guild.roles.find('name', '🛵 English')
 message.member.addRole(role);
 
