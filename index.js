@@ -17,7 +17,8 @@ const config = require ("./Commandes/config.json");
 // Dépanneur
 const DepCandid = require ("./Commandes/truckers.js");
 const CMDparole = require ("./Commandes/parole.js");
-
+const fr = require ("./Commandes/fr.js");
+const eng = require ("./Commandeseng.js");
 /* =Async Fonction= */
 client.on("message", message => {
   if(message.author.bot) return;

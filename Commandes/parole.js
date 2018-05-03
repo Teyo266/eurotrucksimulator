@@ -20,7 +20,9 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase(); 
 ;
-if(command === "parole") {
+if(command === "speak") {
+  if(!message.member.roles.some(r=>["💻 Admin Discord", "👮🏼  Modo Discord", "📱 Admin Truckers MP"].includes(r.name)) )
+  return message.reply("You don't have the permission");
   const parole = args.join(" ");
   message.delete();
    message.channel.send(parole)
